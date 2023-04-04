@@ -10,7 +10,7 @@ const productRoutes = Router();
 // Get all products
 productRoutes.get("/", getProducts);
 // Get single product
-productRoutes.get("/:id", getProduct);
+productRoutes.get("/:slug", getProduct);
 // Create single product
 productRoutes.post("/", createProduct);
 

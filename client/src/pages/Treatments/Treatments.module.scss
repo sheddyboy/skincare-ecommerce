@@ -1,0 +1,69 @@
+.section {
+  padding: 180px 0px 100px 0px;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      font-family: "General Sans", sans-serif;
+      color: #3f4242;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+    }
+
+    .desc {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-family: "Boska", sans-serif;
+      font-size: 32px;
+      line-height: 36px;
+      font-weight: 500;
+      max-width: 485px;
+      text-align: center;
+    }
+
+    .treatments {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px 35px;
+      max-width: 940px;
+      margin-right: auto;
+      margin-left: auto;
+      width: 100%;
+
+      .treatment {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+        }
+
+        h2 {
+          margin-top: 20px;
+          color: #c75e60;
+          font-size: 34px;
+          font-style: italic;
+        }
+
+        p {
+          margin-bottom: 25px;
+          font-family: "Boska", sans-serif;
+          font-size: 20px;
+          line-height: 1.3;
+          font-weight: 500;
+          text-align: center;
+          color: #3f4242;
+          max-width: 340px;
+        }
+      }
+    }
+  }
+}

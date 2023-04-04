@@ -1,0 +1,39 @@
+.section {
+  padding: 180px 0px 100px 0px;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      text-transform: uppercase;
+      font-family: "General Sans", sans-serif;
+      color: #3f4242;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+    }
+
+    .desc {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-family: "Boska", sans-serif;
+      font-size: 32px;
+      line-height: 36px;
+      font-weight: 500;
+      max-width: 485px;
+      text-align: center;
+    }
+
+    .products {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      max-width: 840px;
+      width: 100%;
+    }
+  }
+}

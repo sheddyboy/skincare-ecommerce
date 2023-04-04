@@ -1,0 +1,36 @@
+.wrapper {
+  width: 100%;
+
+  .top {
+    display: flex;
+    align-items: center;
+    padding: 15px 0px;
+    border-bottom: 1px solid #b8b6b4;
+    justify-content: space-between;
+
+    p {
+      font-size: 25px;
+      line-height: 29px;
+      font-weight: 500;
+    }
+
+    .imgWrapper {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      background-color: #c75e60;
+      cursor: pointer;
+
+      img {
+        width: 20px;
+      }
+    }
+  }
+
+  .bottom {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,58 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: #f6e2dd;
+  padding: 10px 15px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+
+  .left {
+    width: 200px;
+
+    & :first-child {
+      height: 210px;
+    }
+  }
+
+  .right {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .top {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 5px;
+
+      .tag {
+        width: 90px;
+
+        & :first-child {
+          width: 100%;
+        }
+      }
+
+      .date {
+        width: 70px;
+
+        & :first-child {
+          width: 100%;
+        }
+      }
+    }
+
+    .bottom {
+      & :first-child {
+        height: 20px;
+      }
+
+      & :nth-child(2) {
+        height: 20px;
+      }
+    }
+  }
+}

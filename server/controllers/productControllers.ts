@@ -9,7 +9,7 @@ const getProducts = (req: Request, res: Response) => {
 };
 const getProduct = (req: Request, res: Response) => {
   productModel
-    .findById(req.params.id)
+    .findOne({ slug: req.params.slug })
     .then((product) => res.status(200).json(product))
     .catch((err) => res.status(400).json({ error: err.message }));
 };

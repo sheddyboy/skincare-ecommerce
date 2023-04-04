@@ -1,0 +1,39 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+  }
+
+  .productTitle {
+    margin-top: 20px;
+    font-size: 27px;
+    margin-bottom: 10px;
+    font-family: "Boska", sans-serif;
+    line-height: 36px;
+    font-weight: 500;
+    color: #3f4242;
+    text-align: center;
+  }
+
+  .productPrice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    color: #3f4242;
+    font-size: 20px;
+    line-height: 1;
+    font-family: "General Sans", sans-serif;
+    font-weight: 500;
+
+    .oldPrice {
+      color: #c75e60;
+      text-decoration: line-through;
+    }
+  }
+}

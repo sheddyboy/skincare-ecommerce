@@ -1,0 +1,118 @@
+.footer {
+  padding-bottom: 30px;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .top {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      border-top: 1px solid #b8b6b4;
+      border-bottom: 1px solid #b8b6b4;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        font-weight: 500;
+      }
+
+      h4 {
+        font-family: "General Sans", sans-serif;
+        color: #3f4242;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+
+      .left {
+        display: flex;
+        flex-direction: column;
+
+        .links {
+          display: flex;
+          flex-direction: column;
+
+          a {
+            color: #3f4242;
+            font-size: 19px;
+            line-height: 1.5;
+            font-family: "Boska", serif;
+            font-weight: 500;
+            transition: color 200ms ease;
+
+            &:hover {
+              color: #c75e60;
+            }
+          }
+        }
+      }
+
+      .middle {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .middleTop {
+          p {
+            font-size: 20px;
+            line-height: 1.3;
+            font-weight: 500;
+          }
+        }
+
+        .middleBottom {
+          p {
+            font-size: 20px;
+            line-height: 1.3;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .rightTop {
+          p {
+            font-size: 20px;
+          }
+        }
+
+        .rightBottom {
+          display: flex;
+          flex-direction: column;
+
+          .socialLinks {
+            display: flex;
+            gap: 20px;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        p {
+          font-family: "General Sans", sans-serif;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 20px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}

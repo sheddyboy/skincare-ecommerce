@@ -6,10 +6,12 @@ import treatmentRoutes from "./routes/treatmentRoutes";
 import productRoutes from "./routes/productRoutes";
 import blogRoutes from "./routes/blogRoutes";
 import orderRoutes from "./routes/orderRoutes";
+import cors from "cors";
 dotenv.config();
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.use("/", (req, res, next) => {
   console.log(req.path, req.method);

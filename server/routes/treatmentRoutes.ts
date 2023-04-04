@@ -10,7 +10,7 @@ const treatmentRoutes = Router();
 // Get all treatments
 treatmentRoutes.get("/", getTreatments);
 // Get single treatment
-treatmentRoutes.get("/:id", getTreatment);
+treatmentRoutes.get("/:slug", getTreatment);
 // Create single treatment
 treatmentRoutes.post("/", createTreatment);
 

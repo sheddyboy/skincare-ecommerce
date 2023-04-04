@@ -7,7 +7,7 @@ const blogRoutes = Router();
 // Get all blogs
 blogRoutes.get("/", getBlogs);
 // Get single blog
-blogRoutes.get("/:id", getBlog);
+blogRoutes.get("/:slug", getBlog);
 // Create single blog
 blogRoutes.post("/", authMiddleware, createBlog);
 

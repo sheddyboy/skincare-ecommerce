@@ -1,0 +1,66 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 740px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #f6e2dd;
+  padding: 20px 35px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+
+  .details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & :nth-child(1) {
+      min-width: 90px;
+    }
+    & :nth-child(2) {
+      min-width: 120px;
+      height: 10px;
+    }
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+
+    width: 480px;
+    & :nth-child(1) {
+      height: 30px;
+    }
+    & :nth-child(2) {
+      height: 25px;
+    }
+  }
+
+  .image {
+    width: 100%;
+    margin-top: 60px;
+    & :nth-child(1) {
+      height: 800px;
+    }
+  }
+
+  .richText {
+    margin-top: 40px;
+    width: 100%;
+    .richTitle {
+      margin-bottom: 10px;
+    }
+    .paragraph {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 15px;
+    }
+  }
+}

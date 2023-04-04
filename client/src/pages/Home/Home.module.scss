@@ -1,0 +1,64 @@
+.home {
+  height: calc(100vh - 88.22px);
+  position: relative;
+  display: flex;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        color: #c75e60;
+        font-size: 100px;
+        line-height: 0.9;
+        font-weight: 500;
+        white-space: normal;
+
+        span {
+          font-size: 140px;
+          font-weight: 300;
+          color: #c75e60;
+          display: inline-block;
+        }
+      }
+    }
+
+    .scroll {
+      position: absolute;
+      bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        font-size: 17px;
+        font-style: italic;
+      }
+
+      img {
+        position: relative;
+        animation: moveUpDown 1s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 5px;
+  }
+  100% {
+    top: 0;
+  }
+}

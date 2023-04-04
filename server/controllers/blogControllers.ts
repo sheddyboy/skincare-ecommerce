@@ -9,7 +9,7 @@ const getBlogs = (req: Request, res: Response) => {
 };
 const getBlog = (req: Request, res: Response) => {
   blogModel
-    .findById(req.params.id)
+    .findOne({ slug: req.params.slug })
     .then((blog) => res.status(200).json(blog))
     .catch((err) => res.status(400).json({ error: err.message }));
 };

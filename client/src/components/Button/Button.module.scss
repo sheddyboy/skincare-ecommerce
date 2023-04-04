@@ -1,0 +1,20 @@
+.button {
+  padding: 10px 30px;
+  border: 1px solid #c75e60;
+  border-radius: 30px;
+  color: #c75e60;
+  transition: all 500ms ease;
+  font-family: "General Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 20px;
+  text-align: center;
+
+  &:hover {
+    background-color: #c75e60;
+    color: #fff;
+    opacity: 0.7;
+  }
+}

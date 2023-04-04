@@ -9,7 +9,7 @@ const getTreatments = (req: Request, res: Response) => {
 };
 const getTreatment = (req: Request, res: Response) => {
   treatmentModel
-    .findById(req.params.id)
+    .findOne({ slug: req.params.slug })
     .then((treatment) => res.status(200).json(treatment))
     .catch((err) => res.status(400).json({ error: err.message }));
 };
