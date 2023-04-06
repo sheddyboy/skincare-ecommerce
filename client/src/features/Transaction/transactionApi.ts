@@ -3,7 +3,7 @@ import { GetTransactionProps, initiateTransactionProps } from "model";
 
 const transactionApi = createApi({
   reducerPath: "transactionApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "" }),
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }),
   endpoints: (builder) => ({
     initiateTransaction: builder.mutation<
       initiateTransactionProps,
