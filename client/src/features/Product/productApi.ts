@@ -6,10 +6,10 @@ const productApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }),
   endpoints: (builder) => ({
     getProducts: builder.query<ProductProps[], void>({
-      query: () => "/api/products",
+      query: () => "/products",
     }),
     getSingleProduct: builder.query<ProductProps, string>({
-      query: (slug) => `/api/products/${slug}`,
+      query: (slug) => `/products/${slug}`,
     }),
   }),
 });

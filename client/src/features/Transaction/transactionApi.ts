@@ -10,13 +10,13 @@ const transactionApi = createApi({
       { email: string; amount: number }
     >({
       query: (body) => ({
-        url: "/api/transaction",
+        url: "/transaction",
         method: "POST",
         body,
       }),
     }),
     getTransaction: builder.query<GetTransactionProps, { ref: string }>({
-      query: ({ ref }) => `/api/transaction/verify/${ref}`,
+      query: ({ ref }) => `/transaction/verify/${ref}`,
     }),
   }),
 });

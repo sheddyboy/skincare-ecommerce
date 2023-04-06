@@ -6,10 +6,10 @@ const blogApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }),
   endpoints: (builder) => ({
     getBlogs: builder.query<BlogProps[], void>({
-      query: () => "/api/blogs",
+      query: () => "/blogs",
     }),
     getSingleBlog: builder.query<BlogProps, string>({
-      query: (slug) => `/api/blogs/${slug}`,
+      query: (slug) => `/blogs/${slug}`,
     }),
   }),
 });

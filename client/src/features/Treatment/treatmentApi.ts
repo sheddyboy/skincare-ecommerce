@@ -6,10 +6,10 @@ const treatmentApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }),
   endpoints: (builder) => ({
     getTreatment: builder.query<TreatmentProps[], void>({
-      query: () => "/api/treatments",
+      query: () => "/treatments",
     }),
     getSingleTreatment: builder.query<TreatmentProps, string>({
-      query: (slug) => `/api/treatments/${slug}`,
+      query: (slug) => `/treatments/${slug}`,
     }),
   }),
 });
