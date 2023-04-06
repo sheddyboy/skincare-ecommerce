@@ -20,7 +20,25 @@ export const authApi = createApi({
         body,
       }),
     }),
+    login: builder.mutation<
+      { user: UserProps; token: string },
+      Pick<UserProps, "email" | "password">
+    >({
+      query: (body) => ({
+        url: "/users/login",
+        method: "POST",
+        body,
+      }),
+    }),
+    verifyToken: builder.mutation<{ id: string }, { token: string }>({
+      query: (body) => ({
+        url: "/users/verify",
+        method: "POST",
+        body,
+      }),
+    }),
   }),
 });
 
-export const { useSignupMutation } = authApi;
+export const { useSignupMutation, useLoginMutation, useVerifyTokenMutation } =
+  authApi;

@@ -4,6 +4,7 @@ import {
   getUser,
   getUsers,
   loginUser,
+  verifyToken,
 } from "../controllers/userControllers";
 
 const userRoutes = Router();
@@ -16,5 +17,7 @@ userRoutes.get("/:id", getUser);
 userRoutes.post("/signup", signupUser);
 // Login user
 userRoutes.post("/login", loginUser);
+// Login token
+userRoutes.post("/verify", verifyToken);
 
 export default userRoutes;

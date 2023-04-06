@@ -58,4 +58,13 @@ const loginUser = (req: Request, res: Response) => {
     .catch(() => res.status(400).json({ error: "Invalid credentials" }));
 };
 
-export { signupUser, getUser, getUsers, loginUser };
+const verifyToken = (req: Request, res: Response) => {
+  try {
+    const data = jwt.verify(req.body.token, process.env.SECRET!);
+    res.status(200).json(data);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+};
+
+export { signupUser, getUser, getUsers, loginUser, verifyToken };

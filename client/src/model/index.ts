@@ -80,3 +80,64 @@ export interface UserProps {
   updatedAt?: string;
   __v?: number;
 }
+
+export interface initiateTransactionProps {
+  status: boolean;
+  message: string;
+  data: {
+    authorization_url: string;
+    access_code: string;
+    reference: string;
+  };
+}
+
+export interface GetTransactionProps {
+  status: boolean;
+  message: string;
+  data: TransactionData;
+}
+
+export interface TransactionData {
+  id: number;
+  domain: string;
+  status: string;
+  reference: string;
+  amount: number;
+  message: null;
+  gateway_response: string;
+  paid_at: null;
+  created_at: Date;
+  channel: string;
+  currency: string;
+  ip_address: string;
+  metadata: string;
+  log: null;
+  fees: null;
+  fees_split: null;
+  authorization: {};
+  customer: Customer;
+  plan: null;
+  split: {};
+  order_id: null;
+  paidAt: null;
+  createdAt: Date;
+  requested_amount: number;
+  pos_transaction_data: null;
+  source: null;
+  fees_breakdown: null;
+  transaction_date: Date;
+  plan_object: {};
+  subaccount: {};
+}
+
+export interface Customer {
+  id: number;
+  first_name: null;
+  last_name: null;
+  email: string;
+  customer_code: string;
+  phone: null;
+  metadata: null;
+  risk_action: string;
+  international_format_phone: null;
+}

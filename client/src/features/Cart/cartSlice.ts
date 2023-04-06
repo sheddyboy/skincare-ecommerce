@@ -57,9 +57,14 @@ const cartSlice = createSlice({
       // Get subTotal
       getSubTotal(state);
     },
+    clearCart: (state) => {
+      state.cartItems = [];
+      state.subTotal = 0;
+    },
   },
 });
 
-export const { addToCart, updateQty, removeFromCart } = cartSlice.actions;
+export const { addToCart, updateQty, removeFromCart, clearCart } =
+  cartSlice.actions;
 
 export default cartSlice;

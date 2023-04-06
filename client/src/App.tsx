@@ -1,6 +1,15 @@
+import { useAppSelector } from "app/hooks";
+import useVerifyUser from "hooks/useVerifyUser";
 import BlogPage from "pages/BlogPage/BlogPage";
+import Login from "pages/Login/Login";
+import Signup from "pages/Signup/Signup";
+import SuccessPage from "pages/SuccessPage/SuccessPage";
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import Root from "./layouts/Root";
 import About from "./pages/About/About";
 import Blog from "./pages/Blog/Blog";
@@ -12,10 +21,12 @@ import Treatment from "./pages/Treatment/Treatment";
 import Treatments from "./pages/Treatments/Treatments";
 
 function App() {
+  useVerifyUser();
+  const { isLoggedIn } = useAppSelector((state) => state.authSlice);
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Root />,
+      element: isLoggedIn ? <Root /> : <Navigate to="/login" />,
       children: [
         {
           path: "/",
@@ -54,6 +65,18 @@ function App() {
           element: <Contact />,
         },
       ],
+    },
+    {
+      path: "/login",
+      element: !isLoggedIn ? <Login /> : <Navigate to="/" />,
+    },
+    {
+      path: "/signup",
+      element: !isLoggedIn ? <Signup /> : <Navigate to="/" />,
+    },
+    {
+      path: "/success/:ref",
+      element: <SuccessPage />,
     },
   ]);
   return <RouterProvider router={router} />;

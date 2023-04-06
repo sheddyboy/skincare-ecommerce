@@ -7,6 +7,8 @@ import productRoutes from "./routes/productRoutes";
 import blogRoutes from "./routes/blogRoutes";
 import orderRoutes from "./routes/orderRoutes";
 import cors from "cors";
+import transactionRoutes from "./routes/transactionRoutes";
+import webhookRoutes from "./routes/webhookRoutes";
 dotenv.config();
 
 const app = express();
@@ -14,7 +16,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/", (req, res, next) => {
-  console.log(req.path, req.method);
+  console.log(req.path, req.method, new Date());
   next();
 });
 
@@ -24,6 +26,10 @@ app.use("/api/treatments", treatmentRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/blogs", blogRoutes);
 app.use("/api/orders", orderRoutes);
+app.use("/api/transaction", transactionRoutes);
+
+// Webhook
+app.use("/api/webhook", webhookRoutes);
 
 mongoose
   .connect(process.env.URI!)

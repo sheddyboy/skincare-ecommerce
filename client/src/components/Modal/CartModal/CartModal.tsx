@@ -1,12 +1,14 @@
 import { useAppDispatch, useAppSelector } from "app/hooks";
 import { removeFromCart, updateQty } from "features/Cart/cartSlice";
 import { AnimatePresence, motion, Variants } from "framer-motion";
+import useInitiateTransaction from "hooks/useInitiateTransaction";
 import useModal from "hooks/useModal";
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./CartModal.module.scss";
 
 const CartModal = () => {
+  const { paystackPopup } = useInitiateTransaction();
   const variants: Variants = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
@@ -15,6 +17,11 @@ const CartModal = () => {
   const { cartItems, subTotal } = useAppSelector((state) => state.cartSlice);
   const { toggleModal } = useModal();
   const dispatch = useAppDispatch();
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    paystackPopup();
+  };
   return (
     <motion.div
       className={styles.wrapper}
@@ -54,6 +61,7 @@ const CartModal = () => {
               initial="initial"
               animate="animate"
               exit="exit"
+              onSubmit={handleSubmit}
             >
               <div className={styles.top}>
                 <AnimatePresence>
