@@ -9,9 +9,9 @@
     form {
       display: flex;
       flex-direction: column;
-      min-width: 500px;
+      min-width: 400px;
       box-sizing: border-box;
-      padding: 30px 50px;
+      padding: 30px 30px;
       border-radius: 10px;
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 
@@ -111,5 +111,11 @@
         font-weight: 500;
       }
     }
+  }
+}
+
+@media (max-width: 450px) {
+  form {
+    min-width: auto !important;
   }
 }

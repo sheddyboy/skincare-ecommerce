@@ -1,4 +1,4 @@
-import { useAppSelector } from "app/hooks";
+import { useAppDispatch, useAppSelector } from "app/hooks";
 import CartModal from "components/Modal/CartModal/CartModal";
 import ModalPortal from "components/ModalPortal/ModalPortal";
 import {
@@ -11,8 +11,10 @@ import useModal from "hooks/useModal";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.scss";
+import { logOut } from "features/Auth/authSlice";
 
 const Navbar = () => {
+  const dispatch = useAppDispatch();
   const { scrollYProgress } = useScroll();
   const [hamMenuToggle, setHamMenuToggle] = useState(false);
   const [direction, setDirection] = useState<"up" | "down">("up");
@@ -54,9 +56,9 @@ const Navbar = () => {
               </Link>
             </div>
             <div className={styles.right}>
-              <Link to="/contact" className={styles.contact}>
-                BOOK NOW
-              </Link>
+              <div className={styles.logOut} onClick={() => dispatch(logOut())}>
+                LOG OUT
+              </div>
               <div className={styles.cart} onClick={toggleModal}>
                 <img src="/images/cart.svg" alt="" width={22} />
                 <span>{cartItems.length}</span>

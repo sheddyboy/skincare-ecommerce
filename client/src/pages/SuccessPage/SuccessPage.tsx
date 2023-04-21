@@ -13,8 +13,9 @@ const SuccessPage = () => {
     <div className={styles.successPage}>
       <div className="container">
         <div className={styles.wrapper}>
-          <h1 className={styles.title}>Payment successful</h1>
-          <img src="/images/check-mark.png" alt="" width={70} />
+          <h1 className={styles.title}>
+            Payment <br /> Successful
+          </h1>
           <div className={styles.details}>
             <div className={styles.detail}>
               <span>Payment type</span>

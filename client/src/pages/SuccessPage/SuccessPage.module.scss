@@ -1,24 +1,25 @@
 .successPage {
+  padding: 0px 5%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #fff;
+  background-color: #eadedb;
 
   .wrapper {
     display: flex;
     flex-direction: column;
-    min-width: 500px;
+    min-width: 400px;
     box-sizing: border-box;
-    padding: 30px 50px;
+    padding: 30px 30px;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #eadedb;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 
     h1 {
       text-align: center;
-      color: #52b884;
+      color: #c75e60;
       font-family: "General Sans", sans-serif;
       margin-bottom: 20px;
     }
@@ -46,5 +47,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    min-width: 300px !important;
   }
 }

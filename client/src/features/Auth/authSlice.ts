@@ -30,9 +30,10 @@ const authSlice = createSlice({
         })
       );
     },
-    logOut: (state, action) => {
+    logOut: (state) => {
       state.user = null;
       state.token = null;
+      state.isLoggedIn = false;
       localStorage.removeItem("User");
     },
   },
