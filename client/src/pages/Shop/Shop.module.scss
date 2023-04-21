@@ -1,5 +1,5 @@
 .section {
-  padding: 180px 0px 100px 0px;
+  padding: 180px 5% 100px 5%;
 
   .wrapper {
     display: flex;
@@ -35,5 +35,11 @@
       max-width: 840px;
       width: 100%;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: 1fr !important;
   }
 }

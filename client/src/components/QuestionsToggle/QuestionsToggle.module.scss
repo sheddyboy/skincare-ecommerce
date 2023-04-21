@@ -15,7 +15,7 @@
     }
 
     .imgWrapper {
-      width: 40px;
+      min-width: 40px;
       height: 40px;
       display: flex;
       justify-content: center;
@@ -32,5 +32,13 @@
 
   .bottom {
     overflow: hidden;
+  }
+}
+
+@media (max-width: 500px) {
+  .top {
+    p {
+      font-size: 21px !important;
+    }
   }
 }

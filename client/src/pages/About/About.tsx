@@ -2,6 +2,7 @@ import Button from "components/Button/Button";
 import { motion, Variants } from "framer-motion";
 import React from "react";
 import styles from "./About.module.scss";
+import Points from "components/Points/Points";
 
 const About = () => {
   const parentVariants: Variants = {
@@ -61,30 +62,7 @@ const About = () => {
               />
             </div>
           </div>
-          <motion.div
-            className={styles.logos}
-            variants={parentVariants}
-            initial="initial"
-            whileInView="whileInView"
-            viewport={{ amount: 0.8, once: true }}
-          >
-            <motion.div className={styles.item} variants={childVariants}>
-              <img src="/images/spa.png" alt="" width={60} />
-              <p>Providing exceptional spa experiences</p>
-            </motion.div>
-            <motion.div className={styles.item} variants={childVariants}>
-              <img src="/images/natural.png" alt="" width={60} />
-              <p>Using natural, sustainable, and locally-sourced products</p>
-            </motion.div>
-            <motion.div className={styles.item} variants={childVariants}>
-              <img src="/images/self-care.png" alt="" width={60} />
-              <p>Empowering customers to prioritize self-care</p>
-            </motion.div>
-            <motion.div className={styles.item} variants={childVariants}>
-              <img src="/images/community.png" alt="" width={60} />
-              <p>Fostering a supportive and inclusive community</p>
-            </motion.div>
-          </motion.div>
+          <Points />
           <div className={styles.team}>
             <motion.div
               className={styles.titleWrapper}
@@ -108,7 +86,7 @@ const About = () => {
               variants={parentVariants}
               initial="initial"
               whileInView="whileInView"
-              viewport={{ amount: 0.8, once: true }}
+              viewport={{ amount: 0.3, once: true }}
             >
               <motion.div className={styles.member} variants={childVariants}>
                 <img src="/images/member-1.jpg" alt="" />

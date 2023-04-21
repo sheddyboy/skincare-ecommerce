@@ -1,5 +1,5 @@
 .section {
-  padding: 180px 0px 100px 0px;
+  padding: 180px 5% 100px 5%;
 
   .wrapper {
     display: flex;
@@ -51,6 +51,7 @@
           color: #c75e60;
           font-size: 34px;
           font-style: italic;
+          text-align: center;
         }
 
         p {
@@ -65,5 +66,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .treatments {
+    grid-template-columns: 1fr !important;
   }
 }

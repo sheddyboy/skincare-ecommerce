@@ -14,6 +14,7 @@ import styles from "./Navbar.module.scss";
 
 const Navbar = () => {
   const { scrollYProgress } = useScroll();
+  const [hamMenuToggle, setHamMenuToggle] = useState(false);
   const [direction, setDirection] = useState<"up" | "down">("up");
   useMotionValueEvent(scrollYProgress, "change", (scrollValue) => {
     scrollValue > scrollYProgress.getPrevious()
@@ -60,7 +61,44 @@ const Navbar = () => {
                 <img src="/images/cart.svg" alt="" width={22} />
                 <span>{cartItems.length}</span>
               </div>
+              <div
+                className={styles.hamMenu}
+                onClick={() => setHamMenuToggle((prev) => !prev)}
+              >
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
             </div>
+            <AnimatePresence>
+              {hamMenuToggle && (
+                <motion.div
+                  className={styles.hamMenuItems}
+                  initial={{ y: "-100%", opacity: 0 }}
+                  animate={{
+                    y: direction === "up" ? "0%" : "-100%",
+                    opacity: 1,
+                  }}
+                  exit={{
+                    y: "-100%",
+                    opacity: 0,
+                  }}
+                >
+                  <Link to="/about" className={styles.link}>
+                    ABOUT
+                  </Link>
+                  <Link to="/treatments" className={styles.link}>
+                    TREATMENT
+                  </Link>
+                  <Link to="/shop" className={styles.link}>
+                    SHOP
+                  </Link>
+                  <Link to="/blog" className={styles.link}>
+                    BLOG
+                  </Link>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </motion.nav>

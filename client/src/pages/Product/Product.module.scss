@@ -1,5 +1,5 @@
 .section {
-  padding: 180px 0px 100px 0px;
+  padding: 180px 5% 100px 5%;
 
   .wrapper {
     .productSection {
@@ -336,6 +336,36 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .productSection {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 700px) {
+  .details {
+    .title {
+      font-size: 40px !important;
+    }
+  }
+  .otherProductSection {
+    .desc {
+      font-size: 28px !important;
+    }
+    .otherProducts {
+      flex-direction: column !important;
+    }
+  }
+  .benefitsSection {
+    .desc {
+      font-size: 28px !important;
+      text-align: center;
+    }
+    .benefits {
+      flex-direction: column !important;
     }
   }
 }

@@ -15,7 +15,7 @@ const Community = () => {
   return (
     <motion.div ref={sectionRef} className={styles.section}>
       <div className={styles.wrapper}>
-        <motion.div className={styles.left} style={{ y: y, top: "-100%" }}>
+        <motion.div className={styles.left} style={{ y: y, top: "0%" }}>
           <div className={styles.leftImage}>
             <img
               src="https://assets.website-files.com/63d901fad2b94bfd6afd0c22/63da604a8bd69457d2b9a2c5_instra-2-p-500.jpg"
@@ -59,10 +59,7 @@ const Community = () => {
             Join our community <span>@Ritual</span>
           </p>
         </div>
-        <motion.div
-          className={styles.right}
-          style={{ y: yAlt, bottom: "-100%" }}
-        >
+        <motion.div className={styles.right} style={{ y: yAlt, bottom: "0%" }}>
           <div className={styles.rightImage}>
             <img
               src="https://assets.website-files.com/63d901fad2b94bfd6afd0c22/63da6160cab4e8c3f4cf017e_instra-4-p-500.jpg"

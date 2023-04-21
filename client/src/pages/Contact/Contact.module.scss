@@ -1,5 +1,7 @@
 .contact {
   padding-top: 180px;
+  padding-left: 5%;
+  padding-right: 5%;
 
   .fromSection {
     display: grid;
@@ -196,6 +198,43 @@
           font-weight: 500;
           padding-top: 10px;
           padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .fromSection {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 500px) {
+  .left {
+    .title {
+      font-size: 28px !important;
+    }
+  }
+  .right {
+    grid-template-columns: 1fr !important;
+    .inputWrapper {
+      &:nth-child(7) {
+        grid-column: 1/1 !important;
+      }
+    }
+    input[type="submit"] {
+      grid-column: 1/1 !important;
+    }
+  }
+
+  .faq {
+    .title {
+      font-size: 28px !important;
+    }
+    .questions {
+      .desc {
+        p {
+          font-size: 18px !important;
         }
       }
     }

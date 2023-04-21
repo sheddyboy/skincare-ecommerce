@@ -71,3 +71,25 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .featuredPost {
+    grid-template-columns: 1fr !important;
+
+    .left {
+      grid-row: 2/3;
+      min-height: 400px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .featuredPost {
+    .left {
+      min-height: 300px;
+
+      p {
+        font-size: 17px !important;
+      }
+    }
+  }
+}

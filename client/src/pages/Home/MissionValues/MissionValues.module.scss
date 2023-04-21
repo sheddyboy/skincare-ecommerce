@@ -1,5 +1,5 @@
 .missionValues {
-  padding: 100px 0px;
+  padding: 100px 5%;
 
   .wrapper {
     display: flex;
@@ -51,7 +51,8 @@
     }
 
     .bottom {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 30px;
       .item {
         display: flex;
@@ -68,5 +69,23 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 800px) {
+  .bottom {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media (max-width: 500px) {
+  .top {
+    p {
+      font-size: 28px !important;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .bottom {
+    grid-template-columns: 1fr !important;
   }
 }

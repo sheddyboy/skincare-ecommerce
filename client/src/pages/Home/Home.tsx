@@ -16,7 +16,7 @@ const Home = () => {
               <h1>
                 The essence of health <span>&</span> vitality in one place.
               </h1>
-              <img src="/images/heroImg.png" alt="" width={600} />
+              <img src="/images/heroImg.png" alt="" />
             </div>
             <div className={styles.scroll}>
               <p>scroll</p>

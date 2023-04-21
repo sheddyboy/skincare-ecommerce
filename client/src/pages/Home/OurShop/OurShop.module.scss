@@ -1,5 +1,5 @@
 .section {
-  padding: 100px 0px;
+  padding: 100px 5%;
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -81,5 +81,14 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 28px !important;
+  }
+  .featuredProducts {
+    grid-template-columns: 1fr !important;
   }
 }

@@ -1,5 +1,5 @@
 .blog {
-  padding: 180px 0px 100px 0px;
+  padding: 180px 5% 100px 5%;
 
   .wrapper {
     .top {
@@ -92,5 +92,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 600px) {
+  blockquote {
+    font-size: 28px !important;
   }
 }

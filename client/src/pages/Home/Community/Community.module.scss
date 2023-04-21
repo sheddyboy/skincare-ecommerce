@@ -1,6 +1,6 @@
 .section {
   position: relative;
-  padding: 100px 0px;
+  padding: 100px 5%;
   overflow: hidden;
 
   .wrapper {
@@ -27,6 +27,8 @@
       justify-content: center;
       align-items: center;
       gap: 20px;
+      position: relative;
+      z-index: 1;
 
       h5 {
         font-family: "General Sans", sans-serif;
@@ -63,5 +65,39 @@
         width: 100%;
       }
     }
+  }
+}
+
+@media (max-width: 1150px) {
+  .left {
+    max-width: 180px !important;
+  }
+  .middle {
+    p {
+      font-size: 38px !important;
+      text-align: center;
+
+      span {
+        display: block !important;
+      }
+    }
+  }
+  .right {
+    max-width: 180px !important;
+  }
+}
+@media (max-width: 730px) {
+  .left {
+    max-width: 140px !important;
+    opacity: 0.3;
+  }
+  .middle {
+    p {
+      font-size: 32px !important;
+    }
+  }
+  .right {
+    max-width: 140px !important;
+    opacity: 0.3;
   }
 }
