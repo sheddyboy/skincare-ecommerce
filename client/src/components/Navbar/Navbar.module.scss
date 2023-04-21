@@ -94,7 +94,8 @@
       left: 0;
       right: 0;
 
-      a {
+      a,
+      p {
         padding-top: 10px;
         padding-bottom: 10px;
         color: #131313;
@@ -131,7 +132,7 @@
   }
 }
 @media (max-width: 425px) {
-  .contact {
+  .logOut {
     display: none;
   }
 }

@@ -86,18 +86,35 @@ const Navbar = () => {
                     opacity: 0,
                   }}
                 >
-                  <Link to="/about" className={styles.link}>
+                  <Link
+                    to="/about"
+                    className={styles.link}
+                    onClick={() => setHamMenuToggle((prev) => !prev)}
+                  >
                     ABOUT
                   </Link>
-                  <Link to="/treatments" className={styles.link}>
+                  <Link
+                    to="/treatments"
+                    className={styles.link}
+                    onClick={() => setHamMenuToggle((prev) => !prev)}
+                  >
                     TREATMENT
                   </Link>
-                  <Link to="/shop" className={styles.link}>
+                  <Link
+                    to="/shop"
+                    className={styles.link}
+                    onClick={() => setHamMenuToggle((prev) => !prev)}
+                  >
                     SHOP
                   </Link>
-                  <Link to="/blog" className={styles.link}>
+                  <Link
+                    to="/blog"
+                    className={styles.link}
+                    onClick={() => setHamMenuToggle((prev) => !prev)}
+                  >
                     BLOG
                   </Link>
+                  <p onClick={() => dispatch(logOut())}>LOG OUT</p>
                 </motion.div>
               )}
             </AnimatePresence>
