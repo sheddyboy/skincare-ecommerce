@@ -1,15 +1,16 @@
 .login {
   .wrapper {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 50px 5%;
 
     form {
       display: flex;
       flex-direction: column;
-      min-width: 400px;
+      width: 500px;
       box-sizing: border-box;
       padding: 30px 30px;
       border-radius: 10px;
