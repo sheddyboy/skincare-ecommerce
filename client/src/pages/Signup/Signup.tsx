@@ -9,6 +9,7 @@ import { logIn } from "features/Auth/authSlice";
 import useGuestLogin from "hooks/useGuestLogin";
 
 const Signup = () => {
+  const [error, setError] = useState({ isError: false, message: "" });
   const { logInGuest, isLoading: guestIsLoading } = useGuestLogin();
   const dispatch = useAppDispatch();
   const [fromDetails, setFromDetails] = useState<UserProps>({
@@ -27,7 +28,19 @@ const Signup = () => {
       .then((data) => {
         dispatch(logIn(data));
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        if (err.status === 401) {
+          setError({ isError: true, message: err.data.error });
+          setTimeout(() => {
+            setError((error) => ({ ...error, isError: false }));
+          }, 3000);
+        } else {
+          setError({ isError: true, message: "Something went wrong" });
+          setTimeout(() => {
+            setError((error) => ({ ...error, isError: false }));
+          }, 3000);
+        }
+      });
   };
 
   const handleInputChange = (
@@ -102,6 +115,7 @@ const Signup = () => {
                 value={fromDetails.password}
                 onChange={(e) => handleInputChange(e, "ps")}
               />
+              {error.isError && <p className={styles.error}>{error.message}</p>}
               <input
                 type="submit"
                 value={signupIsLoading ? "Signing up..." : "Signup"}

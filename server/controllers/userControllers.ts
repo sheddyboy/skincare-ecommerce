@@ -41,7 +41,7 @@ const signupUser = async (req: Request, res: Response) => {
       const token = createToken(user.id);
       res.status(200).json({ user, token });
     })
-    .catch((err) => res.status(400).json({ error: err.message }));
+    .catch(() => res.status(401).json({ error: "User already exists" }));
 };
 
 const loginUser = (req: Request, res: Response) => {
@@ -49,13 +49,14 @@ const loginUser = (req: Request, res: Response) => {
   userModel
     .findOne({ email })
     .then(async (user) => {
+      if (!user) return res.status(401).json({ error: "User not found" });
       const token = createToken(user?.id);
       const validPassword = await comparePassword(password, user?.password!);
       validPassword
         ? res.status(200).json({ user, token })
-        : res.status(400).json({ error: "Invalid credentials" });
+        : res.status(401).json({ error: "Invalid credentials" });
     })
-    .catch(() => res.status(400).json({ error: "Invalid credentials" }));
+    .catch((err) => res.status(400).json({ error: err }));
 };
 
 const verifyToken = (req: Request, res: Response) => {

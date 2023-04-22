@@ -6,7 +6,7 @@ const useGuestLogin = () => {
   const [loginUser, info] = useLoginMutation();
   const dispatch = useAppDispatch();
   const logInGuest = () => {
-    loginUser({ email: "testing30@test.com", password: "testing30@test.com" })
+    loginUser({ email: "guest@guest.com", password: "guest@guest.com" })
       .unwrap()
       .then((data) => {
         dispatch(logIn(data));
